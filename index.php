@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Logowanie</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container  ">
+        <div class="row">
+            <div class="col-md-3 col-1 cards1"></div>
+            <div class="col-md-6  col-10 cards1"></div>     
+            <div class="col-md-3  col-1 cards1"></div>
+        </div>
+        <div class="row ">
+            <div class="col-md-4 col-1 cards3"></div>
+            <div class="col-md-4 col-10 cards2 text-center">
+                <img src="./user-g2d312be5c_640.png" alt="user" >
+                <h2 >Witaj!</h2>
+              
+               
+                <form method="post" action="save.php">
+                    Login:<br> <input type="text" name="login" id="log"></br>
+                    Hasło:<br>  <input type="password" name="pass" id="pass"></br>
+                    <input type="submit" value="Zaloguj się" class=" buttonLogin">
+     
+                </form> 
+            </div>
+            <div class="col-md-4 cards3 col-1" ></div>
+        </div>
+       
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

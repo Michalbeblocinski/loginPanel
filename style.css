@@ -1,0 +1,79 @@
+.cards1{
+    height: 25vh;
+   
+
+}
+.cards2{
+    color: black;
+    padding: 0%;
+    height: 50vh;
+    border: 2px solid aliceblue;
+    border-radius: 4%;
+    -webkit-box-shadow: 0px 0px 20px -1px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 0px 20px -1px rgba(66, 68, 90, 1);
+    box-shadow: 0px 0px 20px -1px rgba(66, 68, 90, 1);
+    background-color: rgba(248, 247, 247, 0.15)!important;
+    
+   
+    backdrop-filter: blur(3px) ;
+}
+
+input{
+    margin-bottom: 10px!important;
+    width: 90%;
+    margin-left:  0;
+    margin-right: 0%;
+}
+img{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    max-width: 30%;
+    max-height: 30%;
+}
+.cards3{
+    height: 50vh;
+    
+    
+
+}
+body {
+    background-image: url("./texture-gbdad644df_1920.jpg");
+    
+   }
+
+.buttonLogin{transition: 0.25s;
+    margin-top: 20px;
+    border:  1px solid aliceblue;
+    background-color: rgb(106, 178, 255,0.6);
+}
+.buttonLogin:hover{
+   color: aliceblue;
+   
+    background-color: rgb(106, 178, 255,1);
+    box-shadow: 0px 0px 20px -1px rgb(227, 228, 234,0.5);
+}
+@media only screen and (max-width: 400px) {
+    .cards1 {
+      display: none;
+    }
+    .cards2{
+       
+        height: 100vh;
+        width: 100vh;
+        
+        
+    }
+  }
+  @media only screen and (max-height: 677px) {
+    .cards1 {
+      display: none;
+    }
+    .cards2{
+       
+        height: 100vh;
+        width: 80vh;
+        
+       
+        
+    }
+  }
