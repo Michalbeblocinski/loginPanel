@@ -98,3 +98,13 @@ text-align: center;
        display: none;
     }
   }
+  .phpEr{
+    border: 2px solid aliceblue!important;
+    background-color: rgb(240, 248, 255,0.8)!important;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    padding-top: 11px;
+  
+  }

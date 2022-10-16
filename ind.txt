@@ -17,15 +17,18 @@ if(isset($_SESSION['logged_id'])){
         integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
-<body> 
-    <?php
-                         if(isset($_SESSION['bad_attemtp2'])){
-                            echo '<div class="phpEr text-center"><p>Niepoprawny login lub hasło</p></div>';
-                           
-                            unset($_SESSION['bad_attemtp2']);
-                           
-                         }
-                        ?>
+<body>
+<?php
+       
+       if(isset($_SESSION['bad_attemtp2'])){
+       echo <<<ZNACZIK
+       <div style="text-align: center" class="alert  alert-dismissible fade show alert-primary">
+
+           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+           <strong>Bład</strong> Niepoprawny login lub hasło
+       </div>
+       ZNACZIK;}?>
     <div class="container  ">
         <div class="row">
             <div class="col-md-3 col-1 cards1"></div>
@@ -43,7 +46,7 @@ if(isset($_SESSION['logged_id'])){
                     Login:<br> <input type="text" name="login" id="log"></br>
                     Hasło:<br>  <input type="password" name="pass" id="pass"></br>
                     <input type="submit" value="Zaloguj się" class=" buttonLogin">
-                   
+                    
                 </form> 
             </div>
             <div class="col-md-4 cards3 col-1" ></div>
