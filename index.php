@@ -36,7 +36,7 @@ if(isset($_SESSION['logged_id'])){
                     <input type="submit" value="Zaloguj się" class=" buttonLogin">
                     <?php
                          if(isset($_SESSION['bad_attemtp2'])){
-                            echo '<p>Nieporpawny login lub hasło</p>';
+                            echo '<p>Niepoprawny login lub hasło</p>';
                            
                             unset($_SESSION['bad_attemtp2']);
                            
