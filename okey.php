@@ -1,10 +1,40 @@
 <?php
 session_start();
-if(isset($_SESSION['logged_id'])){
-    header('Location: okey.php');
+require_once 'database.php';
+if(!isset($_SESSION['logged_id'])){
+
+
+    if(isset($_POST['login'])){
+
+        $login=filter_input(INPUT_POST,'login');
+        $password=filter_input(INPUT_POST,'pass');
+       
+        $userQuery2=$db->prepare('SELECT id,pass FROM admins WHERE login=:login');
+        $userQuery2->bindValue(':login',$login,PDO::PARAM_STR);
+        $userQuery2->execute();
+        $user2 = $userQuery2->fetch();
+        if($user2 && ($password==$user2['pass'])){
+            $_SESSION['logged_id']=$user2['pass'];
+            unset( $_SESSION['bad_attemtp2']);
+
+        }else{
+            $_SESSION['bad_attemtp2']=true;
+            
+            header('Location: index.php');
+            exit();
+        }
+    }
+    else{
+        header('Location: index.php');
+        exit();
+
+    }
 }
+
 ?>
-<!doctype html>
+
+<!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -30,19 +60,11 @@ if(isset($_SESSION['logged_id'])){
                 <h2 >Witaj!</h2>
               
                
-                <form method="post" action="okey.php">
-                    Login:<br> <input type="text" name="login" id="log"></br>
-                    Hasło:<br>  <input type="password" name="pass" id="pass"></br>
-                    <input type="submit" value="Zaloguj się" class=" buttonLogin">
-                    <?php
-                         if(isset($_SESSION['bad_attemtp2'])){
-                            echo '<p>Nieporpawny login lub hasło</p>';
-                           
-                            unset($_SESSION['bad_attemtp2']);
-                           
-                         }
-                        ?>
-                </form> 
+                <p>Zalogowano</p>
+                    <a href="./logout.php">
+                        <div class="floor">Wyloguj się!</div>
+                    </a>
+    <script src="js/bootstrap.js">
             </div>
             <div class="col-md-4 cards3 col-1" ></div>
         </div>
